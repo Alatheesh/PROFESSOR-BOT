@@ -17,7 +17,7 @@ async def ping(_, message):
     time_taken_s = (end_t - start_t) * 1000
     await rm.edit(f"Pong!\n{time_taken_s:.3f} ms")
 
-@client.on_message(filters.command("love"))
+@Client.on_message(filters.command("love"))
 async def send_random_love_message(_, message):
     love_messages = ["i love u "," mee to"]
     response = random.choice(love_messages)
