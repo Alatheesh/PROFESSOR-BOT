@@ -24,7 +24,7 @@ def pic_handler(update, context):
     
     # Send the photo to the user
     context.bot.send_photo(chat_id=chat_id, photo=image_url)
-updater = Updater("BOT_TOKEN")
+updater = Updater("6082750364:AAFDQgYFvp3JxjoEJj5nKGctb0G25Yky0ms")
 dispatcher = updater.dispatcher
 dispatcher.add_handler(CommandHandler("pic", pic_handler))
 updater.start_polling()
