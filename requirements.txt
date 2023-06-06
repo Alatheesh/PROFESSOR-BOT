@@ -40,6 +40,4 @@ ujson
 wget
 pytz
 
-python-telegram-bot
-
 
