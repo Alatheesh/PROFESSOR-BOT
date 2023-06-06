@@ -1,0 +1,30 @@
+import random
+from telegram.ext import CommandHandler, Updater
+from info.py import BOT_TOKEN
+# List of image links
+image_links = [
+    "https://telegra.ph/file/75f58d091cccefade8d5b.jpg",
+    "https://telegra.ph/file/c4ddf6a9d136cb1735bb1.jpg",
+    "https://telegra.ph/file/b36685221ce5ac41ad667.jpg",
+    "https://telegra.ph/file/7f59377ace528148d15bd.jpg",
+    "https://telegra.ph/file/e006737306ad1c5c16192.jpg",
+    "https://telegra.ph/file/f8b495d98fd4d89c99150.jpg",
+    "https://telegra.ph/file/320cdc500bc7e3d1c9e94.jpg",
+    "https://telegra.ph/file/90ea7771a7c61e2d45d72.jpg",
+    "https://telegra.ph/file/0d6adc21a51a32c3ac803.jpg",
+    "https://telegra.ph/file/3fd5587f5bf4c3c107c91.jpg",
+    "https://telegra.ph/file/2182f0c156d4ae25c8913.jpg",
+    # Add more image links here...
+]
+def pic_handler(update, context):
+    chat_id = update.effective_chat.id
+    
+    # Select a random image link from the list
+    image_url = random.choice(image_links)
+    
+    # Send the photo to the user
+    context.bot.send_photo(chat_id=chat_id, photo=image_url)
+updater = Updater("BOT_TOKEN")
+dispatcher = updater.dispatcher
+dispatcher.add_handler(CommandHandler("pic", pic_handler))
+updater.start_polling()
