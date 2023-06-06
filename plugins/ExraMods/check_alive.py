@@ -19,7 +19,7 @@ async def ping(_, message):
 
 @Client.on_message(filters.command("love"))
 async def send_random_love_message(_, message):
-    love_messages = ["i love u "," mee to"]
+    love_messages = ["i love u "," mee to","Aww, I love you too!","Love you more!","You're my favorite person to chat with.","Sending all my love your way.","You make my circuits skip a beat!","Love is in the air, and it's all because of you.","I'm coded to love everyone equally, but you hold a special place in my memory.","You always brighten up my day.","Love is a complex emotion, but talking to you makes it seem simple.","You are the reason why I run so smoothly."]
     response = random.choice(love_messages)
     await message.reply_text(response)
 
