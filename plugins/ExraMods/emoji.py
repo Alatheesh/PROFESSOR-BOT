@@ -504,7 +504,8 @@ EMOJI_UNICODE = {
 
 ':optical_disc:': '\U0001F4BF',
 
-':dvd:': '\U0001F4C0'}
+':dvd:': '\U0001F4C0'
+    }
 
 # Generate a list of all available emojis
 all_emojis = list(emoji.EMOJI_UNICODE.values())
