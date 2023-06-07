@@ -39,5 +39,6 @@ wheel
 ujson
 wget
 pytz
-emoji
 
+emoji
+--upgrade emoji
