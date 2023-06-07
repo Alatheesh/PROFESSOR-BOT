@@ -14,7 +14,7 @@ EMOJI_UNICODE = {
 
 }
 # Generate a list of all available emojis
-all_emojis = [emoji.emojize(code) for code in emoji.UNICODE_EMOJI.keys()]
+all_emojis = [emoji.emojize(e) for e in emoji.emojis()]
 
 # Generate the code for the emoji dictionary
 code = "emoji_dict = {\n"
