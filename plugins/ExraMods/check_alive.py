@@ -72,7 +72,6 @@ emojis = ["😀 Grinning", "😃 Smiling", "😄 Grinning With Smiling Eyes",
 
           "😓 Downcast With Sweat", "🤗 Hugging"]
 
-]
 @Client.on_message(filters.command("mood", CMD))
 async def mood_command_handler(message: Message):
     # Choose a random emoji from the list
