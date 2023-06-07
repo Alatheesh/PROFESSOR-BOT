@@ -40,4 +40,4 @@ ujson
 wget
 pytz
 emoji
---upgrade emoji
+
