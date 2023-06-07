@@ -1,6 +1,6 @@
 import emoji
 
-EMOJI_UNICODE = {
+EMOJI_UNICODE = [
 
     ':grinning_face_with_big_eyes:': '\U0001F603',
 
@@ -506,7 +506,7 @@ EMOJI_UNICODE = {
 
 ':dvd:': '\U0001F4C0'
     
-}
+]
 
 # Generate a list of all available emojis
 all_emojis = list(emoji.EMOJI_UNICODE.values())
