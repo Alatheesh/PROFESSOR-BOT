@@ -34,9 +34,9 @@ BOT_TOKEN = environ.get('BOT_TOKEN', '6176065465:AAF3Bvumshvfjllw8m9PhpCDavFldl5
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = is_enabled(environ.get('USE_CAPTION_FILTER', "True"), True)
 # If you want to set PICS manually:
-PICS = ["https://example.com/pic1.jpg", "https://example.com/pic2.png"]
+# PICS = ["https://example.com/pic1.jpg", "https://example.com/pic2.png"]
 # Otherwise, to fetch from environment:
-# PICS = (environ.get('PICS' ,'https://graph.org/file/01ddfcb1e8203879a63d7.jpg https://graph.org/file/d69995d9846fd4ad632b8.jpg ...')).split()
+PICS = (environ.get('PICS' ,'https://graph.org/file/01ddfcb1e8203879a63d7.jpg https://graph.org/file/d69995d9846fd4ad632b8.jpg ...')).split()
 BOT_START_TIME = time()
 
 # Admins, Channels & Users
@@ -51,7 +51,7 @@ CHANNELS_ENV = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('
 CHANNELS = list(set(MANUAL_CHANNELS + CHANNELS_ENV))
 
 # To manually add authorized users:
-MANUAL_AUTH_USERS = [112233, 445566]
+MANUAL_AUTH_USERS = [907416893]
 auth_users_env = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 auth_users = list(set(MANUAL_AUTH_USERS + auth_users_env))
 AUTH_USERS = (auth_users + [admin for admin in ADMINS if isinstance(admin, int)]) if auth_users else [admin for admin in ADMINS if isinstance(admin, int)]
@@ -60,12 +60,12 @@ auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 
 # To manually add authorized groups:
-MANUAL_AUTH_GROUPS = [-100111222333, -100444555666]
+MANUAL_AUTH_GROUPS = []
 AUTH_GROUPS_ENV = [int(ch) for ch in environ.get('AUTH_GROUP', '').split()] if environ.get('AUTH_GROUP') else []
 AUTH_GROUPS = list(set(MANUAL_AUTH_GROUPS + AUTH_GROUPS_ENV)) if MANUAL_AUTH_GROUPS or AUTH_GROUPS_ENV else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://latheesh:latheesh@cluster0.uouuowj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
